@@ -11,6 +11,8 @@ yarn-error.log*
 backend/.env
 frontend/.env
 frontend/.env.local
+*.env.sample
+env.sample
 
 # Build outputs
 backend/dist/
