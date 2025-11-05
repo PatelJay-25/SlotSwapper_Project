@@ -57,9 +57,16 @@ Environment variables:
 ```
 cd frontend
 npm install
-# Create .env.local with: VITE_API_BASE_URL=http://localhost:5000/api
+# No .env.local needed for local development - defaults to http://localhost:5000/api
+# If you have .env.local with Vercel URL, delete it or comment it out for local dev
 npm run dev
 ```
+
+**Important for Local Development:**
+- The frontend defaults to `http://localhost:5000/api` automatically
+- If you see CORS errors, check that your backend `.env` has `CLIENT_ORIGIN=http://localhost:5173`
+- If you previously created `.env.local` with a Vercel URL, delete it or comment it out
+- Check browser console - you should see `🔗 API Base URL: http://localhost:5000/api` when running locally
 
 ## Core API
 | Method | Path                       | Auth | Body / Params                                | Description |
